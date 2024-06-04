@@ -1,0 +1,183 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{biblatex}
+\usepackage{CJKutf8}
+\usepackage[T1]{fontenc}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage[calc]{datetime2}
+\usepackage{fancyhdr}
+\usepackage[printwatermark]{xwatermark}
+\usetikzlibrary{calc}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{moresize}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+
+\newwatermark[pages=2-30,color=blue!15,angle=45,scale=3,xpos=0,ypos=0]{Rapidamic Lab}
+\pagestyle{fancy}
+\fancyhf{}
+\definecolor{darkblue}{RGB}{0,90,146}
+\fancyhead[L]{\textnormal{\textcolor{black}{Suyan laboratory}}}
+\fancyhead[R]{\includegraphics[width=0.7cm]{logo.jpg}}
+\fancyhead[CO]{\vspace{10pt}}
+\renewcommand{\headrulewidth}{3pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{darkblue}\leaders\hrule height \headrulewidth\hfill}}
+
+\newcommand{\MyTitle}[4][]{%
+\begin{tcolorbox}[width=\textwidth, arc=0mm, auto outer arc,
+   boxrule=-1pt, toprule=5pt, bottomrule=5pt,
+   colframe=suyanblue, colback=white,
+   top=0.5cm, bottom=0.1cm]
+   #2
+\end{tcolorbox}%
+}%
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcommand{\insertname}{
+   %name_%
+}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{CJK*}{UTF8}{gbsn}
+\definecolor{darkblue}{RGB}{0, 90, 146}
+
+\noindent\hfill\begin{minipage}{2.0cm} % set logo on the title page
+   \includegraphics[width=\textwidth]{logo.jpg}\\
+\end{minipage}
+\vspace{-3.7cm}
+
+\noindent\textcolor{darkblue}{\rule{\textwidth}{5pt}} % Increase the thickness of the top line
+\vspace{20pt} % Increase vertical space for visual separation
+
+{\noindent\Large\bfseries\hspace*{0.5cm}ChatIvy:  Professional Report}\\[12pt] % Increase font size and space after the title
+{\noindent\large\bfseries\hspace*{0.5cm}Report recipient: \insertname}\\[10pt] % Increase font size and space after the recipient line
+{\noindent\large\bfseries\hspace*{0.5cm}Date: \today}
+\vspace{10pt}
+
+\noindent\textcolor{darkblue}{\rule{\textwidth}{5pt}} % Increase the thickness of the bottom line
+\vspace{20pt} % Add vertical space after the bottom line
+
+\begin{figure}[H]
+   \centering
+   \includegraphics[width=1.1\textwidth]{{name}_word_cloud.png} % Make sure this path is correct
+   \vspace{15mm} % Adjust this space as needed
+\end{figure}
+
+\begin{tikzpicture}[remember picture, overlay]
+   \definecolor{darkblue}{RGB}{0,90,146}
+   \definecolor{darkerblue}{RGB}{0,35,102}
+   \fill[darkerblue] ($(current page.south west)+(1.9cm,1.4cm + 3cm)$) rectangle ($(current page.south east)+(-1.9cm,2.6cm + 3cm)$);
+   \fill[darkblue] ($(current page.south west)+(2.0cm,1.5cm + 3cm)$) rectangle ($(current page.south east)+(-2.0cm,2.5cm + 3cm)$);
+   \node at ($(current page.south)+(0,2cm + 3cm)$) [white, font=\large] {A visual word cloud generated based on the information you enter};
+\end{tikzpicture}
+
+\newpage
+\fancyfoot[C]{\thepage}
+\hspace{0pt}
+\vspace{0cm}
+%generated_summary%
+\begin{flushleft}
+\end{flushleft}
+
+\newpage
+\hspace{0pt}
+\vspace{0cm}
+\begin{flushleft}
+This report mainly consists of the following parts:
+\begin{itemize}
+    \item \underline{Best Matching Majors}: Based on the questionnaire information as well as the weighting, the 3 most suitable specializations are recommended for the user along with the reasons for the recommendation and the degree of match. The report also contains the potential professional disadvantages of the three majors dilemma, for the user to further eliminate the disliked majors.
+    \item \underline{Recommended Universities for Majors}：Based on the questionnaire information, we recommend the 2 most representative universities for the recommended majors in the country where the user wants to study for the user's reference.
+    \item \underline{Basic and Advanced Courses for Recommended Majors}：List the foundational and advanced courses for the top 3 recommended majors in universities to deepen the user's understanding of what they would study in their future major and help them narrow down their final choice.
+    \item \underline{Historical Development of Recommended Majors}: Introduces important turning points in the development of the three recommended majors over the past 50 years and their significance, expanding the user's understanding of the matched majors.
+    \item \underline{Frontiers of Recommended Majors}: Introduces the more advanced fields in industry and academia of the three recommended majors to help users choose their future majors.
+    \item \underline{Visualization of multi-dimensional assessment of academic interests and abilities: }：Based on the information from the questionnaire and the users' interest in the five major academic sub-fields, the users' matching degree in the three recommended best-matching majors and the four major categories of academic disciplines is assessed on the basis of the five different dimensions, and visual analysis is carried out.
+    \item \underline{High school activity planning based on recommended majors}: Based on the questionnaire information, high school activities based on 3 different major development directions are planned for users, including activities within one week, activities within one month, activities within one year, and activities for background enhancement planning for users' reference.
+    \item \underline{Other Optional Majors}：List 7 majors that meet the user's requirements but do not have the highest degree of match for additional reference.
+\end{itemize}
+\end{flushleft}
+\hspace{0pt}
+\vfill
+
+\newpage
+\hspace{0pt}
+\vspace{0cm}
+\subsection*{Best Matching Majors}
+Based on the information you provided, here are the three most suitable majors we recommend for the student:
+
+\textbf{} %generated_major_prompt_three%
+
+\newpage
+\hspace{0pt}
+\vspace{0cm}
+\subsection*{Potential Major Challenges}
+\textbf{} %generated_potential_major%
+
+%major_list%
+
+\newpage
+\hspace{0pt}
+\vspace{0cm}
+\subsection*{Recommended Universities for Majors}
+%generated_Correspondence_college_recommendations%
+
+\newpage
+\hspace{0pt}
+\vspace{0cm}
+\subsection*{Basic and Advanced Courses for Recommended Majors}
+%generated_Correspondence_Courses%
+
+\newpage
+\hspace{0pt}
+\vspace{0cm}
+\subsection*{Cutting-Edge Fields of Recommended Majors}
+The following information introduces the cutting-edge fields in academia and industry for the three recommended majors:
+%generated_Cutting_edge_field%
+
+\newpage
+\hspace{0pt}
+\vspace{0cm}
+\subsection*{Multidimensional Evaluation Visualization of Student's Subject Interest and Ability}
+\begin{itemize}
+    \item \textbf{Knowledge Mastery:} This dimension measures the student's understanding of the core concepts and skills of the subject through tests or assessments. This may include classroom performance, assignments, projects, test, and exam scores.
+    \item \textbf{Interest Level:} This dimension measures the student's interest in the subject through surveys or questionnaires. This may include the frequency with which the student chooses to study the subject, the time invested in the subject, and self-motivation in the subject.
+    \item \textbf{Practical Application:} This dimension evaluates the student's ability to practically apply the subject knowledge. This may include performance in labs, projects, or internships, and how they apply the learned knowledge to real-world problems.
+    \item \textbf{Innovative Capability:} This dimension measures the student's innovative performance in the subject. This may include whether they can propose new ideas, solve problems with new methods, or create new works.
+    \item \textbf{Future Commitment:} This dimension measures the student's willingness to invest more time and energy in the subject in the future. This may include plans to work or further study in this field in the future.
+\end{itemize}
+%generated_Visualization_p3%
+
+\newpage
+\hspace{0pt}
+\vspace{0cm}
+\subsection*{High School Activities Based on Recommended Majors}
+%generated_Highschool_activities%
+
+\newpage
+\hspace{0pt}
+\vspace{0cm}
+\subsection*{Other Optional Majors}
+Based on the information you provided, we offer other majors that better meet your requirements for your reference:
+%generated_major_prompt_two%
+
+\bigskip
+\bigskip
+\bigskip
+\noindent This report is based on data collected and analyzed by a Large Language Model (LLM), aiming to provide reference and insights for the student's future major selection. Please note that these suggestions are not absolute but are the result of data analysis. We hope this information can help you during the application stage, but please also consider it carefully. \\[10mm]
+
+\noindent Thank you for your participation and support! \\[10mm]
+
+\noindent Sincerely,
+\bigskip
+\bigskip
+\noindent \textbf{The ChatIvy Team}
+\printbibliography
+\clearpage
+\end{CJK*}
+\end{document}
+
